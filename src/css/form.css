@@ -1,0 +1,112 @@
+.textarea,
+.input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #cacbcd;
+  height: 36px;
+  width: 100%;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 0.5em 0.75em;
+  outline: none;
+}
+.textarea,
+.input,
+.textarea:focus,
+.input:focus {
+  transition: border-color 0.2s;
+  -moz-transition: border-color 0.2s;
+  -webkit-transition: border-color 0.2s;
+  -o-transition: border-color 0.2s;
+}
+.textarea {
+  height: auto;
+}
+.input[class*="red-outline"]:focus,
+.textarea[class*="red-outline"]:focus {
+  border-color: #db2828;
+}
+.textarea:focus,
+.input:focus,
+.input[class*="blue-outline"]:focus,
+.textarea[class*="blue-outline"]:focus {
+  border-color: #2185d0;
+}
+.input[class*="green-outline"]:focus,
+.textarea[class*="green-outline"]:focus {
+  border-color: #21ba45;
+}
+.input[class*="yellow-outline"]:focus,
+.textarea[class*="yellow-outline"]:focus {
+  border-color: #fbbd08;
+}
+.input[class*="orange-outline"]:focus,
+.textarea[class*="orange-outline"]:focus {
+  border-color: #f2711c;
+}
+input {
+  margin-bottom: 16px;
+}
+input[type=checkbox],
+input[type=radio] {
+  margin-right: 0.2em ;
+}
+input[class*="input"] {
+  margin-bottom: 0;
+}
+.input-group .input {
+  width: auto;
+  float: left;
+  border-radius: 3px 0 0 3px;
+  margin-bottom: 16px;
+}
+.input-group .btn {
+  float: left;
+  border-radius: 0 3px 3px 0;
+}
+.form-group .input {
+  margin-bottom: 16px;
+}
+.form-group .btn {
+  margin-bottom: 16px;
+  display: block;
+}
+.form-inline > * {
+  float: left;
+  margin-right: 8px;
+}
+.form-inline input {
+  width: auto;
+  margin-bottom: 16px;
+}
+.form-inline label,
+.form-inline .label {
+  line-height: 36px;
+}
+@media (max-width: 767px) {
+  .form-inline input {
+    width: 100%;
+  }
+  .form-inline button {
+    margin-bottom: 16px;
+  }
+}
+.form-inline:after,
+.input-group:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+hr {
+  border: none;
+  border-top: 1px solid #d7d8d9;
+  margin: 0px 0 16px 0;
+}
+label,
+.label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}

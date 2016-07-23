@@ -1,0 +1,123 @@
+@red: #db2828;
+@blue: #2185d0;
+@green: #21ba45;
+@orange: #f2711c;
+@yellow: #fbbd08;
+@default: #cacbcd;
+@black: #333;
+@color-darken-precent: 8%;
+@color-darkener-precent: 13%;
+@height: 36px;
+@margin-bottom:16px;
+
+.transition(@type) {
+    transition: @type 0.2s;
+    -moz-transition: @type 0.2s;
+    -webkit-transition: @type 0.2s;
+    -o-transition: @type 0.2s;
+}
+
+.textarea,.input {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid @default;
+    height: @height;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 0.5em 0.75em;
+    outline: none;
+}
+.textarea,.input,.textarea:focus,.input:focus {
+    .transition(border-color);
+}
+.textarea{
+    height: auto;
+}
+.input[class*="red-outline"]:focus,.textarea[class*="red-outline"]:focus {
+    border-color: @red;
+}
+.textarea:focus,.input:focus,.input[class*="blue-outline"]:focus,.textarea[class*="blue-outline"]:focus {
+    border-color: @blue;
+}
+.input[class*="green-outline"]:focus,.textarea[class*="green-outline"]:focus {
+    border-color: @green;
+}
+.input[class*="yellow-outline"]:focus,.textarea[class*="yellow-outline"]:focus {
+    border-color: @yellow;
+}
+.input[class*="orange-outline"]:focus,.textarea[class*="orange-outline"]:focus {
+    border-color: @orange;
+}
+input{
+    margin-bottom: @margin-bottom;
+}
+input[type=checkbox],input[type=radio]{
+    margin-right: 0.2em ;
+}
+input[class*="input"]{
+    margin-bottom: 0;
+}
+
+.input-group {
+    .input{
+        width:auto;
+        float: left;
+        border-radius: 3px 0 0 3px;
+        margin-bottom: @margin-bottom;
+    }
+    .btn {
+        float: left;
+        border-radius: 0 3px 3px 0;
+    }
+}
+.form-group{
+    .input{
+        margin-bottom: @margin-bottom;
+    }
+    .btn {
+        margin-bottom: @margin-bottom;
+        display: block;
+    }
+}
+
+.form-inline>*{
+    float: left;
+    margin-right: 8px;
+}
+.form-inline {
+    input{
+        width:auto;
+        margin-bottom: 16px;
+    }
+    label,.label{
+        line-height: @height;
+    }
+}
+@media (max-width: 767px) {
+    .form-inline input{
+        width: 100%;
+    }
+    .form-inline button{
+        margin-bottom: @margin-bottom;
+    }
+}
+.form-inline:after,.input-group:after{
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+hr{
+    border: none;
+    border-top:1px solid lighten(@default, 5%);
+    margin:0px 0 @margin-bottom 0;
+}
+
+label,.label{
+    display: block;
+    font-size: 14px;
+    margin-bottom: @margin-bottom/2;
+    font-weight: 600;
+}
