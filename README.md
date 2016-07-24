@@ -1,10 +1,9 @@
 ![img](logo.png 'preview')
 
-**一个轻量级响应式CSS模块。**
+一个轻量级响应式CSS模块。
+---
 
-***
-
-####[<i class="icon-file"></i>Document](#publish-a-document)
+**[<i class="icon-file"></i>Document](#publish-a-document)**
 
 > **About:**
 >
@@ -13,5 +12,4 @@
 > - You can only choose the module you need.
 > - More things will be coming soon.
 
-***
-####[<i class="icon-pencil"></i>Under development......](#publish-a-document)
+**[Under development......](#publish-a-document)**
