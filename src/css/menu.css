@@ -1,0 +1,50 @@
+.menu,
+.menu-line {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.menu hr,
+.menu-line hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+.menu-header {
+  font-weight: 600;
+  margin: 0.5em;
+}
+.menu-line .menu-header,
+.menu-line ul {
+  display: inline-block;
+}
+.menu ul li {
+  list-style: none;
+  padding: 0.5em 1.5em ;
+  border-radius: 3px;
+}
+.menu ul li,
+.menu ul li:hover {
+  transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+.menu-line ul li {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 3px;
+}
+.menu-line ul li,
+.menu-line ul li:hover {
+  transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+.menu-line ul > * {
+  display: inline-block;
+  width: auto;
+}
+.menu ul li:hover,
+.menu-line ul li:hover {
+  background-color: #ddd;
+}

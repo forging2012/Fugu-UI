@@ -1,0 +1,33 @@
+@import "color.less";
+
+table{
+    border-collapse: collapse;
+    & th,& td{
+        height: 36px;
+    }
+}
+.table{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.table > thead > tr > th {
+  border-bottom: 2px solid #ddd;
+}
+
+.odd>tbody>tr:nth-child(odd),.even>tbody>tr:nth-child(even){
+    background-color:  #eee;
+}
+
+.table td {
+  border-top: 1px solid @default;
+}
+
+.table[class*="hover"]>tbody>tr:hover{
+    background-color: #eee;
+}
+
+.border th,
+.border td {
+  border: 1px solid @default;
+}

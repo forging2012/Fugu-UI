@@ -1,0 +1,1 @@
+.even>tbody>tr:nth-child(even),.odd>tbody>tr:nth-child(odd),.table[class*=hover]>tbody>tr:hover{background-color:#eee}table{border-collapse:collapse}table td,table th{height:36px}.table{width:100%;text-align:center;margin-bottom:16px}.table>thead>tr>th{border-bottom:2px solid #ddd}.table td{border-top:1px solid #cacbcd}.border td,.border th{border:1px solid #cacbcd}

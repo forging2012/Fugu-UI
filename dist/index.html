@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Fugu UI</title>
+    <link rel="stylesheet" href="./css/fugu.css">
+    <link rel="stylesheet" href="./css/code.css">
+    <style>
+        p,code{
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+        code{
+            padding: 0.25em;
+            margin: 0.25em;
+            background-color: #eee;
+        }
+        .nav{
+            position: fixed;
+            top: 2.5em;
+            left: 2em;
+        }
+        .logo{
+            font-size: 5em;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="u-md-2 hide-xs hide-sm">
+            <nav class="menu nav">
+                <ul>
+                    <h1 class="menu-header">Menu</h1>
+                    <li><a href="#">开始使用</a></li>
+                    <li><a href="#">安装</a></li>
+                    <hr>
+                    <li id="topTag"><a href="#">基本部件</a></li>
+                    <li id="buttonTag"><a href="#">按钮</a></li>
+                    <li id="formTag"><a href="#">表单</a></li>
+                    <li id="tableTag"><a href="#">表格</a></li>
+                    <li id="menuTag"><a href="#">菜单</a></li>
+                    <li id="gridTag"><a href="#">栅格化</a></li>
+                    <hr>
+                    <li><a href="">开发中...</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="u-md-8 container-fluid" id="top">
+            <div class="text-center">
+                <h1 class="logo bold">FUGU <span style="color:#00ADB5">U</span>I</h1>
+                <h1 class="text-large">一个简单的轻量级响应式CSS模块。</h1>
+                <h4 class="bold">v0.1</h4>
+                <br><br>
+            </div>
+            <div class="text-center" id="button">
+                <h1 class="bold">按钮</h1>
+                <h3>非常简单的CSS按钮样式</h3>
+                <hr>
+            </div>
+            <h2>默认按钮</h2>
+            <p>给<code>input</code>或者<code>button</code>添加class <code>.btn</code>可以实现按钮样式。</p>
+            <button class="btn blue">Button</button>
+            <input type="button"class="btn blue" value="Button" />
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"button" </span><span class="cls">class</span>=<span class="str">"btn blue"</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>禁止按钮</h2>
+            <p>给<code>input</code>或者<code>button</code>添加属性 <code>disabled</code>可以实现禁止按钮。</p>
+            <button class="btn" disabled>Button</button>
+            <input type="button"class="btn" value="Button" disabled/>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn" </span><span class="cls">disabled</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"button" </span><span class="cls">class</span>=<span class="str">"btn" <span class="cls">disabled</span></span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>彩色按钮</h2>
+            <p>给<code>input</code>或者<code>button</code>添加 class </p><p><code>.red</code><code>.orange</code><code>.yellow</code><code>.green</code><code>.blue</code><code>.black</code><code>.primary</code>可以实现彩色按钮样式。</p>
+            <button class="btn red">Button</button>
+            <button class="btn orange">Button</button>
+            <button class="btn yellow">Button</button>
+            <button class="btn green">Button</button>
+            <button class="btn blue">Button</button>
+            <button class="btn black">Button</button>
+            <button class="btn default">Button</button>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn red"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn orange"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn yellow"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn green"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn black"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn primary"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>按钮大小</h2>
+            <p>给<code>input</code>或者<code>button</code>添加class<code>.big</code><code>.small</code>可以实现不同大小按钮。</p>
+            <button class="btn blue big">Button</button>
+            <button class="btn blue">Button</button>
+            <button class="btn blue small">Button</button>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue big"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue small"</span>&gt;button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <div class="text-center" id="form">
+                <h1 class="bold">表单</h1>
+                <h3>非常简单的CSS表单样式</h3>
+                <hr>
+            </div>
+            <h2>默认输入框</h2>
+            <p>给<code>input</code>添加class <code>.input</code>可以实现默认输入框样式。</p>
+            <p>给<code>textarea</code>添加class <code>.textarea</code>可以实现默认输入框样式。</p>
+            <input type="text" class="input" placeholder="Input Box" />
+            <br><br>
+            <textarea class="textarea" placeholder="Input Box" rows="4"></textarea>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>/&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;<span class="tag">textarea </span><span class="cls">class</span>=<span class="str">"textarea"</span>&gt;&lt;/<span class="tag">textarea</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>禁止输入框</h2>
+            <p>给<code>input</code>添加属性 <code>disabled</code>可以禁止输入框。</p>
+            <input type="text" class="input" placeholder="Input Box" disabled/>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input" <span class="cls">disabled</span></span>/&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>输入框组</h2>
+            <p>给<code>&lt;form&gt;</code>添加class<code>.input-group</code>就可以创建输入框组。</p>
+            <form class="input-group">
+                <input type="text" class="input" placeholder="Input Box">
+                <button class="btn default">Button</button>
+            </form>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">form </span><span class="cls">class</span>=<span class="str">"input-group"</span>&gt;</code>
+                </li><li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>/&gt;</code>
+                </li><li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn primary"</span>&gt;Button&lt;/<span class="tag">button</span>&gt;</code>
+                </li><li>
+                    <code class="bold">&lt;/<span class="tag">form</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>表单</h2>
+            <p><code>&lt;form&gt;</code>添加class<code>.form-group</code>，将其它的表单元素作为其子节点。</p>
+            <form class="form-group">
+               <label>Username:</label>
+               <input type="text" class="input" placeholder="Input Box"/>
+               <label>Password:</label>
+               <input type="text" class="input" placeholder="Input Box"/>
+               <input type="checkbox" />checkbox
+               <br>
+               <input type="radio" />A
+               <input type="radio" />B
+               <input type="radio" />C
+               <br>
+               <select class="input">
+                   <option value ="volvo">选项一</option>
+                   <option value ="saab">选项二</option>
+                   <option value="opel">选项三</option>
+                   <option value="audi">选项四</option>
+               </select>
+               <input type="file">
+               <button class="btn blue">Button</button>
+            </form>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">form </span><span class="cls">class</span>=<span class="str">"form-group"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">label</span>&gt;Username:&lt;/<span class="tag">label</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>/&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">label</span>&gt;Username:&lt;/<span class="tag">label</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>/&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"checkbox"</span>/&gt;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">br</span>/&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"radio"</span>/&gt;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">br</span>/&gt;</code>
+                </li>
+                <li>
+                    <code class="bold ">&nbsp;&nbsp;&lt;<span class="tag">select </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">option</span>&gt;...&lt;/<span class="tag">option</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;/<span class="tag">select</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn primary"</span>&gt;Button&lt;/<span class="tag">button</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">form</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>单行表单</h2>
+            <p>给<code>&lt;form&gt;</code>添加class<code>.form-inline</code>就可以创建单行表单。</p>
+            <form  class="form-inline" >
+                <label>Username:</label>
+                <input type="text" class="input" placeholder="Input Box"/>
+                <button class="btn blue">Button</button>
+            </form>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">form</span><span class="cls"> class</span>=<span class="str">"form-inline"</span>&gt;</code>
+                </li><li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">label</span>&gt;Username:&lt;/<span class="tag">label</span>&gt;</code>
+                </li><li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">input </span><span class="cls">type</span>=<span class="str">"text" </span><span class="cls">class</span>=<span class="str">"input"</span>/&gt;</code>
+                </li><li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">button </span><span class="cls">class</span>=<span class="str">"btn blue"</span>&gt;Button&lt;/<span class="tag">button</span>&gt;</code>
+                </li><li>
+                    <code class="bold">&lt;/<span class="tag">form</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <div class="text-center" id="table">
+                <h1 class="bold">表格</h1>
+                <h3>非常简单的CSS表格样式</h3>
+                <hr>
+            </div>
+            <h2>默认表格</h2>
+            <p>给<code>&lt;table&gt;</code>添加class <code>.table</code>可以实现默认表格样式。</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th><th>Name</th><th>Like</th><th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>Tom</td><td>Apple</td><td>2014</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>Jack</td><td>Orange</td><td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Alice</td><td>Peach</td><td>2016</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">table </span><span class="cls">class</span>=<span class="str">"table"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">thead</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">tr</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">tr</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;/<span class="tag">thead</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">tbody</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">tr</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">tr</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;/<span class="tag">tbody</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">table</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>表格边框</h2>
+            <p>给<code>&lt;table&gt;</code>添加class <code>.border</code>可以实现表格边框样式。</p>
+            <table class="table border">
+                <thead>
+                    <tr>
+                        <th>#</th><th>Name</th><th>Like</th><th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>Tom</td><td>Apple</td><td>2014</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>Jack</td><td>Orange</td><td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Alice</td><td>Peach</td><td>2016</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">table </span><span class="cls">class</span>=<span class="str">"table border"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">table</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>悬浮效果边框</h2>
+            <p>给<code>&lt;table&gt;</code>添加class <code>.hover</code>可以实现表格悬浮效果。</p>
+            <table class="table hover">
+                <thead>
+                    <tr>
+                        <th>#</th><th>Name</th><th>Like</th><th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>Tom</td><td>Apple</td><td>2014</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>Jack</td><td>Orange</td><td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Alice</td><td>Peach</td><td>2016</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">table </span><span class="cls">class</span>=<span class="str">"table hover"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">table</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>斑马表格</h2>
+            <p>给<code>&lt;table&gt;</code>添加class <code>.odd</code>或<code>.even</code>可以实现斑马表格效果。</p>
+            <table class="table odd">
+                <thead>
+                    <tr>
+                        <th>#</th><th>Name</th><th>Like</th><th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><td>Tom</td><td>Apple</td><td>2014</td>
+                    </tr>
+                    <tr>
+                        <td>2</td><td>Jack</td><td>Orange</td><td>2015</td>
+                    </tr>
+                    <tr>
+                        <td>3</td><td>Alice</td><td>Peach</td><td>2016</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">table </span><span class="cls">class</span>=<span class="str">"table odd"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">table</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <div class="text-center" id="menu">
+                <h1 class="bold">菜单</h1>
+                <h3>非常简单的CSS按钮样式</h3>
+                <hr>
+            </div>
+            <h2>菜单</h2>
+            <p>给<code>&lt;nav&gt;</code>添加class <code>.menu</code>可以实现菜单样式。</p>
+            <p>添加class <code>.menu-header</code>可以添加菜单子标题。</p>
+            <nav class="menu"  style="width:30%;">
+                <div class="menu-header">MenuTitle</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">What</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">nav </span><span class="cls">class</span>=<span class="str">"menu"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">div </span><span class="cls">class</span>=<span class="str">"menu-header"</span>&gt;...&lt;/<span class="tag">div</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">ul</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;/<span class="tag">ul</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">nav</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <h2>单行菜单</h2>
+            <p>给<code>&lt;nav&gt;</code>添加class <code>.menu-line</code>可以实现单行菜单样式。</p>
+            <p>添加class <code>.menu-header</code>可以添加菜单子标题。</p>
+            <nav class="menu-line">
+                <div class="menu-header">MenuTitle</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <input type="text" class="input">
+                    <button class="btn blue">Search</button>
+                </ul>
+            </nav>
+            <ol class="code">
+                <li>
+                    <code class="bold">&lt;<span class="tag">nav </span><span class="cls">class</span>=<span class="str">"menu-line"</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">div </span><span class="cls">class</span>=<span class="str">"menu-header"</span>&gt;...&lt;/<span class="tag">div</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;<span class="tag">ul</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&nbsp;&nbsp;...</code>
+                </li>
+                <li>
+                    <code class="bold">&nbsp;&nbsp;&lt;/<span class="tag">ul</span>&gt;</code>
+                </li>
+                <li>
+                    <code class="bold">&lt;/<span class="tag">nav</span>&gt;</code>
+                </li>
+            </ol>
+            <br>
+            <div class="text-center" id="grid">
+                <h1 class="bold">栅格化</h1>
+                <h3>十二分之一的网格布局</h3>
+                <hr>
+            </div>
+            <h2>Grad</h2>
+            <p>给<code>&lt;div&gt;</code>的子节点添加class <code>.u-xs-*</code><code>.u-sm-*</code><code>.u-md-*</code><code>.u-lg-*</code>可以定义栅格。</p>
+            <p><code>u-xs-*</code>代表手机下显示样式。<code>u-sm-*</code>代表平板下显示样式。<code>u-md-*</code>代表电脑屏幕下显示样式。<code>u-lg-*</code>代表大屏幕显示器下显示样式。</p>
+            <p><code>u-*-*</code>共有数字<code>1------12</code>可选，数字相加超过12会另起到下一行。</p>
+            <div class="grid">
+                <div class="u-xs-1">
+                    <input type="text" class="input" value="u-xs-1" disabled/>
+                </div>
+                 <div class="u-xs-2">
+                    <input type="text" class="input" value="u-xs-2" disabled/>
+                </div>
+                <div class="u-xs-3">
+                    <input type="text" class="input" value="u-xs-3" disabled/>
+                </div>
+                <div class="u-xs-4">
+                    <input type="text" class="input" value="u-xs-4" disabled/>
+                </div>
+                <div class="u-xs-5">
+                    <input type="text" class="input" value="u-xs-5" disabled/>
+                </div>
+                <div class="u-xs-6">
+                    <input type="text" class="input" value="u-xs-6" disabled/>
+                </div>
+                <div class="u-xs-7">
+                    <input type="text" class="input" value="u-xs-7" disabled/>
+                </div>
+                <div class="u-xs-8">
+                    <input type="text" class="input" value="u-xs-8" disabled/>
+                </div>
+                <div class="u-xs-9">
+                    <input type="text" class="input" value="u-xs-9" disabled/>
+                </div>
+                <div class="u-xs-10">
+                    <input type="text" class="input" value="u-xs-10" disabled/>
+                </div>
+                <div class="u-xs-11">
+                    <input type="text" class="input" value="u-xs-11" disabled/>
+                </div>
+                <div class="u-xs-12">
+                    <input type="text" class="input" value="u-xs-12" disabled/>
+                </div>
+            </div>
+            <br>
+            <h2>自适应显隐</h2>
+            <p>给<code>&lt;div&gt;</code>的子节点添加class <code>.show-xs</code><code>.show-sm</code><code>.show-md</code><code>.show-lg</code><code>.hide-xs</code><code>.hide-sm</code><code>.hide-md</code><code>.hide-lg</code>可以控制不同分辨率下的显示和隐藏。</p>
+            <div class="panel">
+                <h3 class="hide-xs">.hide-xs</h3>
+                <h3 class="hide-sm">.hide-sm</h3>
+                <h3 class="hide-md">.hide-md</h3>
+                <h3 class="hide-lg">.hide-lg</h3>
+                <h3 class="show-xs">.show-xs</h3>
+                <h3 class="show-xs">.show-xs</h3>
+                <h3 class="show-sm">.show-sm</h3>
+                <h3 class="show-md">.show-md</h3>
+                <h3 class="show-lg">.show-lg</h3>
+            </div>
+            <br>
+            <h2>其他属性</h2>
+            <p>给<code>&lt;div&gt;</code>的添加class <code>.container</code><code>.container-fluid</code>可以界面模板的居中和边距。</p>
+            <p>*在栅格内部避免使用<code>.container</code>，而改用<code>.container-fluid</code>避免页面宽度溢出。</p>
+            <p>给<code>&lt;div&gt;</code>的添加class <code>.clearfix</code>可以清除浮动。</p>
+            <br>
+        </div>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+            $("#topTag").click(function(){$("html,body").animate({scrollTop: $("#top").offset().top}, 800);});
+            $("#buttonTag").click(function(){$("html,body").animate({scrollTop: $("#button").offset().top}, 800);});
+            $("#formTag").click(function(){ $("html,body").animate({scrollTop: $("#form").offset().top}, 800);});
+            $("#tableTag").click(function(){ $("html,body").animate({scrollTop: $("#table").offset().top}, 800);});
+            $("#menuTag").click(function(){ $("html,body").animate({scrollTop: $("#menu").offset().top}, 800);});
+            $("#gridTag").click(function(){ $("html,body").animate({scrollTop: $("#grid").offset().top}, 800);});
+    </script>
+</body>
+</html>

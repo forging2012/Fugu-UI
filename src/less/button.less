@@ -1,0 +1,71 @@
+@import "color.less";
+a[class*="btn"]{
+    font-size: 13px;
+}
+.btn {
+    line-height: 36px;
+    vertical-align: bottom;
+    display:inline-block;
+    height: @height;
+    padding:0 1.5em;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    &,&:hover {
+        .transition(background-color);
+    }
+    &[disable],&[disabled] {
+        background-color: @default;
+        cursor: not-allowed;
+    }
+}
+.btn-color(@color){
+    &:focus,&:hover {
+        .btn-darken( @color);
+    }
+    &:active {
+        .btn-darkener( @color);
+    }
+}
+.btn[class*="red"] {
+    .btn-color(@red);
+}
+.btn[class*="blue"] {
+    .btn-color(@blue);
+}
+.btn[class*="green"] {
+    .btn-color(@green);
+}
+.btn[class*="yellow"] {
+    .btn-color(@yellow);
+}
+.btn[class*="orange"] {
+    .btn-color(@orange);
+}
+.btn[class*="black"] {
+    background-color: @black;
+}
+.btn[class*="default"] {
+    color: rgba(0, 0, 0, 0.7);
+}
+.btn[class*="default"]:focus,
+.btn[class*="default"]:hover {
+    .btn-darken( @default);
+    color: rgba(0, 0, 0, 1);
+}
+.btn[class*="default"]:active {
+    .btn-darkener( @default);
+}
+.small {
+    font-size: 75%;
+    height: @height*0.75;
+    line-height: @height*0.75;
+}
+.big {
+    font-size: 125%;
+    height: @height*1.25;
+    line-height: @height*1.25;
+}
